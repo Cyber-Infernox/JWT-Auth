@@ -1,4 +1,5 @@
 const jwt = require("jsonwebtoken");
+const cors = require("cors");
 const express = require("express");
 const app = express();
 
@@ -6,6 +7,7 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 app.use(express.json()); // For post requests
+app.use(cors());
 
 const users = [
   {
